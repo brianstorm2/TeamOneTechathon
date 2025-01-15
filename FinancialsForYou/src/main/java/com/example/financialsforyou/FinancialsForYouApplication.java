@@ -14,6 +14,9 @@ public class FinancialsForYouApplication {
         return "index";
     }
 
+    @GetMapping("/mortgages")
+    public String mortgages() { return "mortgages"; }
+
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
     }
