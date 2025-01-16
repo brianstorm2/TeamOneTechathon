@@ -19,10 +19,7 @@ public class FinancialsForYouApplication {
     return "mortgages"; 
     }
 
-    @GetMapping("/budgets")
-    public String budgets() {
-        return "budgets";
-    }
+
 
     @GetMapping("/pensions")
     public String pensions() {
