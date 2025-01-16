@@ -10951,7 +10951,8 @@ p {
 #altMainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #ff5733; /* Different background color */
+  background-color: #030303; /* Different background color */
+  color: #030303;
 }
 #altMainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10987,6 +10988,7 @@ p {
     border: none;
     background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    color: #ffffff;
   }
   #altMainNav .navbar-brand {
     font-size: 1.5em;
@@ -10999,8 +11001,9 @@ p {
   #altMainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #ff5733; /* Ensure the same different background color */
+    background-color: #212529; /* Ensure the same different background color */
   }
+
   #altMainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
@@ -11008,7 +11011,12 @@ p {
   #altMainNav.navbar-shrink .navbar-brand img {
     height: 1.5rem;
   }
-  #altMainNav .navbar-nav .nav-item {
+
+  #altMainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: #ffffff; /* White text when navbar is shrunk */
+  }
+  
+    #altMainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
   #altMainNav .navbar-nav .nav-item:last-child {
