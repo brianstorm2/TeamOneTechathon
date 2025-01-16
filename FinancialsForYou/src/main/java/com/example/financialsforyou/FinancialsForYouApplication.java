@@ -35,6 +35,9 @@ public class FinancialsForYouApplication {
     }
 
 
+    @GetMapping("/budgets")
+    public String budgets() { return "budgets"; }
+
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
     }
