@@ -11186,6 +11186,29 @@ section#contact form#contactForm :-ms-input-placeholder {
   background-color: #f8f9fa;
 }
 
+/* Main content styling */
+.main-video-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+  padding: 20px; /* Optional: Add some padding */
+  margin-top: 100px;
+}
+
+/* Video section styling */
+.video-section {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.video-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 
 .container mt-5 {
   background-color: #f8f9fa; /* Light background color for comment section */

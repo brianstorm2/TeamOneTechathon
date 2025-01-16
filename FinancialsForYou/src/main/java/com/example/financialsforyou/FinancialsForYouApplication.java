@@ -52,6 +52,9 @@ public class FinancialsForYouApplication {
     @GetMapping("/budgetInfo") //budget article page
     public String budgetInfo() { return "budgetInfo"; }
 
+    @GetMapping("/pensionsVideo") //pension video page
+    public String pensionsVideo() { return "pensionsVideo"; }
+
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
     }
