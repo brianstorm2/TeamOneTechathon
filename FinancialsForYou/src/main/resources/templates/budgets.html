@@ -22,6 +22,15 @@
 
     <!-- Custom Styles for Pension Calculator -->
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5;
+        }
+        #try {
+            display: inline-block;
+            padding: 10px 20px;
+            width: auto;
+        }
         .calculator-container {
             background-color: #fff;
             max-width: 600px;
@@ -44,15 +53,13 @@
             color: white;
             border: none;
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         button:hover {
             background-color: #0056b3;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-            text-align: center;
         }
 
         /* Company Branding */
@@ -150,6 +157,13 @@
 
 <script src="/js/budget.js"></script>
 
+<div>
+    <button id="try">
+        <a href="/quiz">
+            Try Our Quiz
+        </a>
+    </button>
+</div>
 
 <!-- Mock Comment Section-->
 <div class="container mt-5">

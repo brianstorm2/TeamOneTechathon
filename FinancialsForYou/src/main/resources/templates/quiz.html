@@ -10,10 +10,16 @@
     <link href="/css/styles.css" rel="stylesheet" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5;
             text-align: center;
             padding: 0;
             margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         nav {
@@ -24,8 +30,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: calc(100vh - 60px);
-            padding: 20px;
+            height: calc(100vh - 110px);
+            background-color: #fff;
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         #quiz-container,
@@ -98,128 +109,128 @@
     const questions = [
         {
             question: "What is the primary purpose of a pension?",
-            options: ["To provide a steady income after retirement(correct)", "To buy property", "To pay off debts"],
-            answer: 1
+            options: ["To provide a steady income after retirement", "To buy property", "To pay off debts"],
+            answer: 0
         },
         {
             question: "What is the full new State Pension (as of 2024) in the UK?",
-            options: ["£190.50 per week", "£203.85 per week (correct)", "£215.75 per week"],
+            options: ["£190.50 per week", "£203.85 per week", "£215.75 per week"],
             answer: 1
         },
         {
             question: "What is the minimum contribution an employer must make to a workplace pension?",
-            options: ["5% of qualifying earnings", "3% of qualifying earnings (correct)", "7% of qualifying earnings"],
-            answer: 2
+            options: ["5% of qualifying earnings", "3% of qualifying earnings", "7% of qualifying earnings"],
+            answer: 1
         },
         {
             question: "Which type of pension guarantees income based on salary and years of service?",
-            options: ["Defined Contribution (DC) Pension", "Self-Invested Personal Pension (SIPP)", "Defined Benefit (DB) Pension (correct)"],
+            options: ["Defined Contribution (DC) Pension", "Self-Invested Personal Pension (SIPP)", "Defined Benefit (DB) Pension"],
             answer: 2
         },
         {
             question: "At what age can most people access their pension in the UK (as of 2024)?",
-            options: ["50", "55 (correct)", "60"],
-            answer: 2
+            options: ["50", "55", "60"],
+            answer: 1
         },
         {
             question: "Which pension type allows you more control over investment decisions?",
-            options: ["Defined Benefit (DB) Pension", "Self-Invested Personal Pension (SIPP) (correct)", "State Pension"],
-            answer: 2
+            options: ["Defined Benefit (DB) Pension", "Self-Invested Personal Pension (SIPP)", "State Pension"],
+            answer: 1
         },
         {
             question: "What is the recommended savings percentage for a comfortable retirement starting in your 20s?",
-            options: ["5%-8% of annual income", "12%-15% of annual income (correct)", "20%-25% of annual income"],
-            answer: 2
+            options: ["5%-8% of annual income", "12%-15% of annual income", "20%-25% of annual income"],
+            answer: 1
         },
         {
             question: "What does tax relief on pension contributions mean?",
-            options: ["Contributions are tax-free up to certain limits (correct)", "Contributions are doubled by the government", "Taxes are refunded after retirement"],
-            answer: 2
+            options: ["Contributions are tax-free up to certain limits", "Contributions are doubled by the government", "Taxes are refunded after retirement"],
+            answer: 0
         },
         {
             question: "What is the minimum annual income needed for a comfortable retirement in the UK (2024 estimates)?",
-            options: ["£12,800", "£23,300", "£37,300 (correct)"],
+            options: ["£12,800", "£23,300", "£37,300"],
             answer: 2
         },
         {
             question: "Which of these is NOT a type of UK pension scheme?",
-            options: ["State Pension", "Government Pension Plan (correct)", "Workplace Pension"],
-            answer: 2
+            options: ["State Pension", "Government Pension Plan", "Workplace Pension"],
+            answer: 1
         },
         {
             question: "What is a mortgage?",
-            options: ["A savings account for homebuyers", "A secured loan to purchase property (correct)", "A payment plan for utilities"],
-            answer: 2
+            options: ["A savings account for homebuyers", "A secured loan to purchase property", "A payment plan for utilities"],
+            answer: 1
         },
         {
             question: "What is the minimum deposit required for most mortgages in the UK?",
-            options: ["5%-20% of the property’s value (correct)", "25%-30% of the property’s value", "1%-5% of the property’s value"],
-            answer: 2
+            options: ["5%-20% of the property’s value", "25%-30% of the property’s value", "1%-5% of the property’s value"],
+            answer: 0
         },
         {
             question: "What happens if you fail to repay your mortgage?",
-            options: ["The lender increases your interest rate", "The lender repossesses the property (correct)", "The lender reduces the loan balance"],
-            answer: 2
+            options: ["The lender increases your interest rate", "The lender repossesses the property", "The lender reduces the loan balance"],
+            answer: 1
         },
         {
             question: "Which type of mortgage links your savings to your mortgage balance?",
-            options: ["Tracker Mortgage", "Offset Mortgage (correct)", "Fixed-Rate Mortgage"],
-            answer: 2
+            options: ["Tracker Mortgage", "Offset Mortgage", "Fixed-Rate Mortgage"],
+            answer: 1
         },
         {
             question: "What is a typical mortgage term in the UK?",
-            options: ["5-10 years", "25 years (correct)", "40 years"],
-            answer: 2
+            options: ["5-10 years", "25 years", "40 years"],
+            answer: 1
         },
         {
             question: "What does a fixed-rate mortgage offer?",
-            options: ["Fixed monthly payments for an agreed period (correct)", "Payments that decrease over time", "Payments tied to inflation"],
-            answer: 2
+            options: ["Fixed monthly payments for an agreed period", "Payments that decrease over time", "Payments tied to inflation"],
+            answer: 0
         },
         {
             question: "Which mortgage type tracks the Bank of England’s base rate?",
-            options: ["Tracker Mortgage (correct)", "Fixed-Rate Mortgage", "Offset Mortgage"],
-            answer: 2
+            options: ["Tracker Mortgage", "Fixed-Rate Mortgage", "Offset Mortgage"],
+            answer: 0
         },
         {
             question: "What is an interest-only mortgage?",
-            options: ["You pay both interest and the loan balance monthly", "You pay only the interest monthly, with the balance due at the end (correct)", "You only pay when you sell the property"],
-            answer: 2
+            options: ["You pay both interest and the loan balance monthly", "You pay only the interest monthly, with the balance due at the end", "You only pay when you sell the property"],
+            answer: 1
         },
         {
             question: "What is the purpose of a Mortgage Agreement in Principle (AIP)?",
-            options: ["To lock in a mortgage interest rate", "To show lenders you’re ready to buy", "To demonstrate a lender’s willingness to lend to you (correct)"],
+            options: ["To lock in a mortgage interest rate", "To show lenders you’re ready to buy", "To demonstrate a lender’s willingness to lend to you"],
             answer: 2
         },
         {
             question: "What is a Help to Buy Mortgage designed for?",
-            options: ["Property investors", "First-time buyers (correct)", "Homeowners looking to downsize"],
-            answer: 2
+            options: ["Property investors", "First-time buyers", "Homeowners looking to downsize"],
+            answer: 1
         },
         {
             question: "Which UK body regulates mortgages?",
-            options: ["The Financial Conduct Authority (FCA) (correct)", "The Prudential Regulation Authority (PRA)", "The Bank of England"],
-            answer: 2
+            options: ["The Financial Conduct Authority (FCA)", "The Prudential Regulation Authority (PRA)", "The Bank of England"],
+            answer: 0
         },
         {
             question: "How does a lower interest rate affect your mortgage?",
-            options: ["Increases monthly payments", "Reduces monthly payments and total interest (correct)", "Extends the loan term"],
-            answer: 2
+            options: ["Increases monthly payments", "Reduces monthly payments and total interest", "Extends the loan term"],
+            answer: 1
         },
         {
             question: "What is the first step to getting a mortgage?",
-            options: ["Submit a full mortgage application", "Check your credit score (correct)", "Save for legal fees"],
-            answer: 2
+            options: ["Submit a full mortgage application", "Check your credit score", "Save for legal fees"],
+            answer: 1
         },
         {
             question: "What is a key benefit of understanding mortgages?",
-            options: ["It guarantees a higher property value", "It helps save on interest payments (correct)", "It allows early retirement"],
-            answer: 2
+            options: ["It guarantees a higher property value", "It helps save on interest payments", "It allows early retirement"],
+            answer: 1
         },
         {
             question: "What happens after contracts are exchanged during a property purchase?",
-            options: ["The mortgage is automatically paid off", "Funds are transferred, and the purchase is completed (correct)", "The property value is reassessed"],
-            answer: 2
+            options: ["The mortgage is automatically paid off", "Funds are transferred, and the purchase is completed", "The property value is reassessed"],
+            answer: 1
         },
     ];
 
@@ -288,7 +299,7 @@
     function showResults() {
         quizContainer.style.display = "none";
         resultContainer.style.display = "block";
-        resultElement.textContent = `You got ${score} out of 5 correct!`;
+        resultElement.textContent = `You got ${score} out of 5 correct!\n You have earned ${score * 15} learner points`;
     }
 
     // Restart the Quiz
