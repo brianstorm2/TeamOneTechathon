@@ -11125,6 +11125,68 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
+/*#searchForm {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+}
+#searchForm .form-control { width: 200px;
+}*/
+
+#altMainNav #searchForm .btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+#altMainNav #searchForm .btn-outline-light:active {
+  border-color: #007bff;
+  color: #007bff;
+  box-shadow: 0 0 8px 2px rgba(0, 123, 255, 0.75); /* Glowing blue effect */
+}
+
+#searchForm .btn-outline-light:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Dropdown menu styling */
+#searchForm {
+  position: relative;
+}
+
+#searchForm .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px); /* Position below the search bar */
+  left: 0;
+  width: 100%; /* Match the width of the search bar */
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-radius: 0 0 5px 5px; /* Rounded corners for smooth appearance */
+  overflow: hidden; /* Ensure text wraps properly */
+  max-height: 200px; /* Optional: Limit the height to make it scrollable */
+  overflow-y: auto; /* Make the dropdown scrollable if content exceeds max-height */
+}
+
+#searchForm .dropdown-menu.show {
+  display: block;
+}
+
+#searchForm .dropdown-item {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  white-space: normal; /* Ensure text wraps */
+}
+
+#searchForm .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+
 .container mt-5 {
   background-color: #f8f9fa; /* Light background color for comment section */
   padding: 2rem;

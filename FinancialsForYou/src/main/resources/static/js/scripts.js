@@ -98,3 +98,44 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const searchDropdown = document.getElementById('searchDropdown');
+    const searchForm = document.getElementById('searchForm')
+
+    // Mock data for articles
+    const articles = [
+        { title: 'Understanding Pensions', url: '/understandingpensions' },
+        { title: 'Mortgage Basics', url: '/mortgagebasics' },
+        { title: 'Advanced Budgeting Tips', url: '/advancedbudgeting' }
+    ];
+
+    // Filter articles based on search input
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        searchDropdown.innerHTML = '';
+
+        if (query) {
+            const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(query));
+            filteredArticles.forEach(article => {
+                const item = document.createElement('a');
+                item.className = 'dropdown-item';
+                item.href = article.url;
+                item.textContent = article.title;
+                searchDropdown.appendChild(item);
+            });
+            searchDropdown.classList.add('show');
+        } else {
+            searchDropdown.classList.remove('show');
+        }
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!searchForm.contains(event.target) && !searchDropdown.contains(event.target)) {
+            searchDropdown.classList.remove('show');
+        }
+    });
+});
+

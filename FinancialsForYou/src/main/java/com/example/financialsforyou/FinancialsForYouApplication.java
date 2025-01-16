@@ -29,6 +29,14 @@ public class FinancialsForYouApplication {
         return "about";
     }
 
+
+    @GetMapping("/investments")
+    public String investments() {
+        return "investments";
+    }
+
+
+
     @GetMapping("/budgets")
     public String budgets() { return "budgets"; }
 
