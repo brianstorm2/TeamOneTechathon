@@ -14,30 +14,36 @@ public class FinancialsForYouApplication {
         return "index";
     }
 
-    @GetMapping("/mortgages")
+    @GetMapping("/mortgages") //mortgages page
     public String mortgages() { 
     return "mortgages"; 
     }
 
-    @GetMapping("/pensions")
+
+
+
+    @GetMapping("/pensions") //pensions page
+
     public String pensions() {
         return "pensions";
     }
 
-    @GetMapping("/about")
+    @GetMapping("/about") //about page
     public String about() {
         return "about";
     }
 
 
-    @GetMapping("/investments")
+    @GetMapping("/investments") //investments page
+
     public String investments() {
         return "investments";
     }
 
 
 
-    @GetMapping("/budgets")
+    @GetMapping("/budgets") //budgets page
+
     public String budgets() { return "budgets"; }
 
     @GetMapping("/quiz")
