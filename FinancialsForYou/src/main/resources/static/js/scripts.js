@@ -104,11 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchDropdown = document.getElementById('searchDropdown');
     const searchForm = document.getElementById('searchForm')
 
-    // Mock data for articles
+    // Articles
     const articles = [
-        { title: 'Understanding Pensions', url: '/understandingpensions' },
-        { title: 'Mortgage Basics', url: '/mortgagebasics' },
-        { title: 'Advanced Budgeting Tips', url: '/advancedbudgeting' }
+        { title: 'Investments Guide', url: '/investmentsInfo' },
+        { title: 'Mortgage Guide', url: '/mortgageInfo' },
+        { title: 'Budgeting Tips', url: '/budgetInfo' },
+        {title: 'Pensions Guide', url: '/pensionsInfo'}
     ];
 
     // Filter articles based on search input
