@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz by Financials4U" />
+    <meta name="author" content="Financials4U" />
+    <title>Financials4U Quiz</title>
+
+    <link href="/css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+        #main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 60px);
+            padding: 20px;
+        }
+
+        #quiz-container,
+        #result-container {
+            display: none;
+        }
+        #options button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 20px 50px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="altMainNav">
+    <div class="container">
+        <a class="navbar-brand brand-name" href="#page-top">Financials4U</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            Menu <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mortgages">Mortgages</a></li>
+                <li class="nav-item"><a class="nav-link" href="/budgets">Budgeting</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pensions">Pensions</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<container id="main-container">
+    <div id="main-menu">
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+    </div>
+
+    <div id="result-container">
+        <p id="result"></p>
+        <button id="restart-quiz">Restart Quiz</button>
+        <button id="exit-quiz"><a href="/">Exit Quiz</a></button>
+    </div>
+</container>
+
+<script>
+    // Array of the quiz questions
+    const questions = [
+        {
+            question: "What is the primary purpose of a pension?",
+            options: ["To provide a steady income after retirement(correct)", "To buy property", "To pay off debts"],
+            answer: 1
+        },
+        {
+            question: "What is the full new State Pension (as of 2024) in the UK?",
+            options: ["£190.50 per week", "£203.85 per week (correct)", "£215.75 per week"],
+            answer: 1
+        },
+        {
+            question: "What is the minimum contribution an employer must make to a workplace pension?",
+            options: ["5% of qualifying earnings", "3% of qualifying earnings (correct)", "7% of qualifying earnings"],
+            answer: 2
+        },
+        {
+            question: "Which type of pension guarantees income based on salary and years of service?",
+            options: ["Defined Contribution (DC) Pension", "Self-Invested Personal Pension (SIPP)", "Defined Benefit (DB) Pension (correct)"],
+            answer: 2
+        },
+        {
+            question: "At what age can most people access their pension in the UK (as of 2024)?",
+            options: ["50", "55 (correct)", "60"],
+            answer: 2
+        },
+        {
+            question: "Which pension type allows you more control over investment decisions?",
+            options: ["Defined Benefit (DB) Pension", "Self-Invested Personal Pension (SIPP) (correct)", "State Pension"],
+            answer: 2
+        },
+        {
+            question: "What is the recommended savings percentage for a comfortable retirement starting in your 20s?",
+            options: ["5%-8% of annual income", "12%-15% of annual income (correct)", "20%-25% of annual income"],
+            answer: 2
+        },
+        {
+            question: "What does tax relief on pension contributions mean?",
+            options: ["Contributions are tax-free up to certain limits (correct)", "Contributions are doubled by the government", "Taxes are refunded after retirement"],
+            answer: 2
+        },
+        {
+            question: "What is the minimum annual income needed for a comfortable retirement in the UK (2024 estimates)?",
+            options: ["£12,800", "£23,300", "£37,300 (correct)"],
+            answer: 2
+        },
+        {
+            question: "Which of these is NOT a type of UK pension scheme?",
+            options: ["State Pension", "Government Pension Plan (correct)", "Workplace Pension"],
+            answer: 2
+        },
+        {
+            question: "What is a mortgage?",
+            options: ["A savings account for homebuyers", "A secured loan to purchase property (correct)", "A payment plan for utilities"],
+            answer: 2
+        },
+        {
+            question: "What is the minimum deposit required for most mortgages in the UK?",
+            options: ["5%-20% of the property’s value (correct)", "25%-30% of the property’s value", "1%-5% of the property’s value"],
+            answer: 2
+        },
+        {
+            question: "What happens if you fail to repay your mortgage?",
+            options: ["The lender increases your interest rate", "The lender repossesses the property (correct)", "The lender reduces the loan balance"],
+            answer: 2
+        },
+        {
+            question: "Which type of mortgage links your savings to your mortgage balance?",
+            options: ["Tracker Mortgage", "Offset Mortgage (correct)", "Fixed-Rate Mortgage"],
+            answer: 2
+        },
+        {
+            question: "What is a typical mortgage term in the UK?",
+            options: ["5-10 years", "25 years (correct)", "40 years"],
+            answer: 2
+        },
+        {
+            question: "What does a fixed-rate mortgage offer?",
+            options: ["Fixed monthly payments for an agreed period (correct)", "Payments that decrease over time", "Payments tied to inflation"],
+            answer: 2
+        },
+        {
+            question: "Which mortgage type tracks the Bank of England’s base rate?",
+            options: ["Tracker Mortgage (correct)", "Fixed-Rate Mortgage", "Offset Mortgage"],
+            answer: 2
+        },
+        {
+            question: "What is an interest-only mortgage?",
+            options: ["You pay both interest and the loan balance monthly", "You pay only the interest monthly, with the balance due at the end (correct)", "You only pay when you sell the property"],
+            answer: 2
+        },
+        {
+            question: "What is the purpose of a Mortgage Agreement in Principle (AIP)?",
+            options: ["To lock in a mortgage interest rate", "To show lenders you’re ready to buy", "To demonstrate a lender’s willingness to lend to you (correct)"],
+            answer: 2
+        },
+        {
+            question: "What is a Help to Buy Mortgage designed for?",
+            options: ["Property investors", "First-time buyers (correct)", "Homeowners looking to downsize"],
+            answer: 2
+        },
+        {
+            question: "Which UK body regulates mortgages?",
+            options: ["The Financial Conduct Authority (FCA) (correct)", "The Prudential Regulation Authority (PRA)", "The Bank of England"],
+            answer: 2
+        },
+        {
+            question: "How does a lower interest rate affect your mortgage?",
+            options: ["Increases monthly payments", "Reduces monthly payments and total interest (correct)", "Extends the loan term"],
+            answer: 2
+        },
+        {
+            question: "What is the first step to getting a mortgage?",
+            options: ["Submit a full mortgage application", "Check your credit score (correct)", "Save for legal fees"],
+            answer: 2
+        },
+        {
+            question: "What is a key benefit of understanding mortgages?",
+            options: ["It guarantees a higher property value", "It helps save on interest payments (correct)", "It allows early retirement"],
+            answer: 2
+        },
+        {
+            question: "What happens after contracts are exchanged during a property purchase?",
+            options: ["The mortgage is automatically paid off", "Funds are transferred, and the purchase is completed (correct)", "The property value is reassessed"],
+            answer: 2
+        },
+    ];
+
+    let currentQuestionIndex = 0;
+    let randomizedQuestions = [];
+    let score = 0;
+
+    // DOM Elements
+    const mainMenu = document.getElementById("main-menu");
+    const startQuizButton = document.getElementById("start-quiz");
+    const quizContainer = document.getElementById("quiz-container");
+    const questionElement = document.getElementById("question");
+    const optionsContainer = document.getElementById("options");
+    const resultContainer = document.getElementById("result-container");
+    const resultElement = document.getElementById("result");
+    const restartQuizButton = document.getElementById("restart-quiz");
+    const exitQuizButton = document.getElementById("exit-quiz");
+
+    // this starts the quiz
+    startQuizButton.addEventListener("click", startQuiz);
+
+    function startQuiz() {
+        mainMenu.style.display = "none";
+        quizContainer.style.display = "block";
+        resultContainer.style.display = "none";
+        currentQuestionIndex = 0;
+        score = 0;
+        randomizedQuestions = shuffleArray([...questions]); // Shuffle the questions
+        loadQuestion();
+    }
+
+    // This function gets the questions to stop after 5
+    function loadQuestion() {
+        if (currentQuestionIndex < 5 && randomizedQuestions.length) {
+            const currentQuestion = randomizedQuestions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            optionsContainer.innerHTML = "";
+
+            // Shuffle options while keeping track of the correct answer
+            const shuffledOptions = shuffleArray(currentQuestion.options.map((option, index) => ({
+                text: option,
+                isCorrect: index === currentQuestion.answer
+            })));
+
+            shuffledOptions.forEach((option) => {
+                const button = document.createElement("button");
+                button.textContent = option.text;
+                button.addEventListener("click", () => handleAnswer(option.isCorrect));
+                optionsContainer.appendChild(button);
+            });
+        } else {
+            showResults();
+        }
+    }
+
+    //handle the user answer
+    function handleAnswer(isCorrect) {
+        if (isCorrect) {
+            score++;
+        }
+        currentQuestionIndex++;
+        loadQuestion();
+    }
+
+    // Show the Results out of 5
+    function showResults() {
+        quizContainer.style.display = "none";
+        resultContainer.style.display = "block";
+        resultElement.textContent = `You got ${score} out of 5 correct!`;
+    }
+
+    // Restart the Quiz
+    restartQuizButton.addEventListener("click", () => {
+        resultContainer.style.display = "none";
+        startQuiz();
+    });
+
+    // Exit the Quiz
+    exitQuizButton.addEventListener("click", () => {
+        resultContainer.style.display = "none";
+        mainMenu.style.display = "block";
+    });
+
+    // shuffle function to randomise
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+</script>
+</body>
+</html>
