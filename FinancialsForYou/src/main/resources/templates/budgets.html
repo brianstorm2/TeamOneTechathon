@@ -3,37 +3,84 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Budgeting Advice</title>
-    <!-- Favicon-->
+    <meta name="description" content="Pension Calculator by Financials4U" />
+    <meta name="author" content="Financials4U" />
+    <title>Financials4U | Budget Calculator</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
+
+    <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
     <link href="/css/styles.css" rel="stylesheet" />
+
+    <!-- Custom Styles for Pension Calculator -->
+    <style>
+        .calculator-container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Company Branding */
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
 </head>
+
 <body id="page-top">
-<!-- Navigation-->
+
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="altMainNav">
     <div class="container">
-        <a class="navbar-brand" href="/"><img src="/assets/img/navbar-logo.svg" alt="..." /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
+        <a class="navbar-brand brand-name" href="#page-top">Financials4U</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            Menu <i class="fas fa-bars ms-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="/">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="/mortgages">Mortgages</a></li>
                 <li class="nav-item"><a class="nav-link" href="/budgets">Budgeting</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pensions">Pensions</a></li>
-                <li class="nav-item"><a class="nav-link" href="/investments">Investments</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/pensions">Pensions</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
             </ul>
             <!-- Search Bar -->
             <form class="d-flex ms-auto my-2 my-lg-0" id="searchForm">
@@ -46,6 +93,28 @@
         </div>
     </div>
 </nav>
+
+
+<!-- Pension Calculator Section -->
+<div class="calculator-container">
+    <h2 style="text-align: center;">Financials4U Budget Calculator</h2>
+
+    <form id="budgetForm" onsubmit="divideIncome(event)">
+        <label for="netIncome">Enter Your Net Monthly Income (£):</label><br>
+        <input id="netIncome" type="number" name="netIncome" required><br>
+
+        <button type="submit">Check Your Budget</button>
+
+    </form>
+
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+</div>
+
+<script src="/js/budget.js"></script>
+
+
 <!-- Mock Comment Section-->
 <div class="container mt-5">
     <h4>Comments</h4>
@@ -56,20 +125,25 @@
                  width="50"
                  height="50">
             <div class="comment-content ml-3">
+
+
                 <h5>sam_business37</h5>
                 <p>The budget calculator is amazing!</p>
+
             </div>
         </div> <div class="comment mb-4">
         <img src="/assets/img/blank-profile.jpg"
              alt="Profile" class="rounded-circle" width="50" height="50">
         <div class="comment-content ml-3">
+
+
             <h5>ana_2000</h5>
             <p>The budget tips and advice here are incredible. Really helped my future planning</p>
+
         </div>
     </div>
     </div>
 </div>
-<!-- Core theme JS-->
-<script src="/js/scripts.js"></script>
+
 </body>
 </html>

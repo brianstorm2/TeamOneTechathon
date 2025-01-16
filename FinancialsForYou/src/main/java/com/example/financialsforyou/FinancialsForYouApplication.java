@@ -19,10 +19,7 @@ public class FinancialsForYouApplication {
     return "mortgages"; 
     }
 
-    @GetMapping("/budgets")
-    public String budgets() {
-        return "budgets";
-    }
+
 
     @GetMapping("/pensions")
     public String pensions() {
@@ -34,6 +31,9 @@ public class FinancialsForYouApplication {
         return "about";
     }
 
+
+    @GetMapping("/budgets")
+    public String budgets() { return "budgets"; }
 
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
