@@ -11125,6 +11125,32 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
+/*#searchForm {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+}
+#searchForm .form-control { width: 200px;
+}*/
+
+#altMainNav #searchForm .btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+#altMainNav #searchForm .btn-outline-light:active {
+  border-color: #007bff;
+  color: #007bff;
+  box-shadow: 0 0 8px 2px rgba(0, 123, 255, 0.75); /* Glowing blue effect */
+}
+
+#searchForm .btn-outline-light:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
 .container mt-5 {
   background-color: #f8f9fa; /* Light background color for comment section */
   padding: 2rem;
