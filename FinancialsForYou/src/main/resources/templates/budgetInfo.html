@@ -29,61 +29,54 @@
     }
 
     .header-section {
-      background: linear-gradient(to right, #00b894, #00cec9);
+      background: linear-gradient(to right, #007bff, #00c6ff);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
 
-    .info-section, .tips-section, .faq-section, .interactive-section {
+    .info-section, .faq-section{
       background-color: #fff;
       border-radius: 10px;
       padding: 40px 30px;
       margin: 20px auto;
       max-width: 1000px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      font-size: 18px;
+      font-size: 20px;
+
     }
 
     .info-icon {
       font-size: 50px;
-      color: #00b894;
+      color: #007bff;
     }
 
     .btn-action {
-      background-color: #00b894;
+      background-color: #007bff;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
       display: inline-block;
       margin-top: 20px;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .btn-action:hover {
-      background-color: #00897b;
+      background-color: #00c6ff;
     }
+
 
     footer {
       background-color: #343a40;
       color: white;
       text-align: center;
       padding: 20px 0;
+      margin-top: 40px;
     }
 
-    .progress {
-      height: 30px;
-      border-radius: 20px;
-      overflow: hidden;
-      background-color: #e9ecef;
-    }
-
-    .progress-bar {
-      font-size: 14px;
-      line-height: 30px;
-      color: white;
-      text-align: center;
+    .faq-item {
+      margin-bottom: 20px;
     }
 
     .faq-question {
@@ -95,6 +88,7 @@
       display: none;
       padding-top: 10px;
     }
+
   </style>
 </head>
 
@@ -120,50 +114,88 @@
 
 <!-- Header Section -->
 <div class="header-section">
-  <h1>Master Your Money: Budgeting & Saving Made Simple</h1>
-  <p>Learn how to manage your finances, save wisely, and invest in your future.</p>
+  <h1>Master Your Money: The Ultimate Guide to Budgeting & Saving</h1>
+  <p>Unlock the secrets to financial freedom by learning how to effectively budget, save, and invest in your future.</p>
+  <a href="/budget-calculator" class="btn-action">🚀 Try Our Budget Calculator</a>
 </div>
 
 <!-- What is Budgeting Section -->
 <div class="info-section">
   <h2><i class="fas fa-wallet info-icon"></i> What is Budgeting?</h2>
-  <p>Budgeting helps you plan and control your income and expenses. It's the key to financial freedom and achieving your goals.</p>
+  <p>
+    Budgeting is the foundation of sound financial management. It is the strategic process of allocating your income towards expenses, savings, and debt repayments. A well-crafted budget ensures that you have a clear understanding of your financial situation, empowering you to make informed decisions and secure your future.
+  </p>
+  <p>
+    Fundamentally, budgeting involves balancing your income with your expenses. This practice not only helps you avoid overspending but also prepares you for unforeseen financial emergencies and long-term financial goals. Whether you're managing household finances, saving for a major purchase, or aiming for financial independence, budgeting is an essential tool for success.
+  </p>
+  <h3>📈 Key Components of a Budget:</h3>
+  <ul>
+    <li><strong>Income:</strong> The total money you receive from all sources, including salary, bonuses, freelance work, side hustles, and investment returns.</li>
+    <li><strong>Fixed Expenses:</strong> Essential costs that remain constant month-to-month, such as rent, mortgage payments, insurance premiums, and utility bills.</li>
+    <li><strong>Variable Expenses:</strong> Costs that fluctuate depending on usage and lifestyle choices, such as groceries, entertainment, dining out, and clothing.</li>
+    <li><strong>Savings & Investments:</strong> Funds set aside for short-term and long-term financial goals, including emergency funds, retirement savings, and investments in stocks or real estate.</li>
+    <li><strong>Debt Repayment:</strong> Payments made towards reducing outstanding debts like credit cards, student loans, car loans, and personal loans.</li>
+  </ul>
 </div>
 
-<!-- 🚀 Steps to Create a Budget -->
+<!-- Why Budgeting is Important -->
 <div class="info-section">
-  <h2><i class="fas fa-tasks info-icon"></i> 🚀 Steps to Create a Budget</h2>
-  <ol>
-    <li>📊 <strong>Calculate Your Income:</strong> Know how much money you bring in monthly.</li>
-    <li>📝 <strong>Track Your Spending:</strong> Understand where your money goes.</li>
-    <li>🎯 <strong>Set Clear Financial Goals:</strong> Define what you’re saving for.</li>
-    <li>💳 <strong>Allocate Funds Wisely:</strong> Apply the 50/30/20 rule or similar.</li>
-    <li>🔄 <strong>Review Regularly:</strong> Adjust your budget as needed.</li>
-  </ol>
-  <a href="/budget-calculator" class="btn-action">🚀 Try Our Budget Calculator</a>
+  <h2><i class="fas fa-lightbulb info-icon"></i> Why Budgeting is Important</h2>
+  <p>
+    Budgeting is crucial for maintaining financial health and achieving long-term financial stability. Without a clear plan, it's easy to overspend, fall into debt, or miss out on saving opportunities. Here’s why budgeting is essential for everyone:
+  </p>
+  <ul>
+    <li>📉 <strong>Prevent Overspending:</strong> A budget ensures you live within your means and prevents impulse purchases that can derail your financial plans.</li>
+    <li>💰 <strong>Build Savings:</strong> Budgeting allows you to set aside money for emergencies, future goals, and investments, fostering a strong safety net.</li>
+    <li>🎯 <strong>Achieve Financial Goals:</strong> Whether it’s buying a home, funding education, or traveling, budgeting helps you break down large goals into achievable steps.</li>
+    <li>💳 <strong>Reduce Debt:</strong> Allocating funds towards debt repayment lowers financial stress and improves your credit score over time.</li>
+    <li>📈 <strong>Gain Financial Control:</strong> Budgeting empowers you to make smarter money decisions, leading to greater financial independence.</li>
+  </ul>
 </div>
 
-<!-- 50/30/20 Rule Progress Bar -->
-<div class="tips-section">
-  <h2><i class="fas fa-tasks info-icon"></i> Visual Guide: 50/30/20 Rule</h2>
-  <div class="progress">
-    <div class="progress-bar bg-primary" style="width: 50%;">50% Needs</div>
-    <div class="progress-bar bg-success" style="width: 30%;">30% Wants</div>
-    <div class="progress-bar bg-warning text-dark" style="width: 20%;">20% Savings</div>
-  </div>
+<!-- Budgeting Methods -->
+<div class="info-section">
+  <h2><i class="fas fa-cogs info-icon"></i> Popular Budgeting Methods</h2>
+  <p>
+    Not all budgeting strategies work for everyone. Here are several popular budgeting methods to help you find one that best aligns with your financial lifestyle:
+  </p>
+  <ul>
+    <li>🔢 <strong>50/30/20 Rule:</strong> Allocate 50% of your income for needs (housing, utilities, groceries), 30% for wants (entertainment, hobbies), and 20% for savings and debt repayment.</li>
+    <li>📆 <strong>Zero-Based Budgeting:</strong> Assign every pound of income a purpose. Income minus expenses should equal zero, ensuring every penny is accounted for.</li>
+    <li>📦 <strong>Envelope System:</strong> Use physical cash envelopes for different spending categories. Once the envelope is empty, no more spending in that category.</li>
+    <li>📈 <strong>Pay Yourself First:</strong> Prioritise savings by automatically transferring a portion of your income into savings or investments before paying bills or discretionary spending.</li>
+    <li>📝 <strong>Line-Item Budgeting:</strong> Create a detailed breakdown of all your income and expenses to monitor spending closely.</li>
+  </ul>
 </div>
 
-<!-- Interactive Savings Goal Calculator -->
-<div class="interactive-section">
-  <h2><i class="fas fa-calculator info-icon"></i> Set Your Savings Goal</h2>
-  <label for="goalAmount">Savings Goal (£):</label>
-  <input type="number" id="goalAmount" placeholder="Enter your savings goal">
-  <label for="monthlySaving">Monthly Saving (£):</label>
-  <input type="number" id="monthlySaving" placeholder="Enter how much you can save monthly">
-  <button class="btn-action" onclick="calculateGoal()">Calculate</button>
-  <p id="goalResult"></p>
+<!-- Long-Term Financial Goals -->
+<div class="info-section">
+  <h2><i class="fas fa-bullseye info-icon"></i> Setting Long-Term Financial Goals</h2>
+  <p>
+    Budgeting is not just about managing day-to-day expenses. It's also about planning for the future. Setting long-term financial goals keeps you focused and motivated. Examples of long-term financial goals include:
+  </p>
+  <ul>
+    <li>🏡 <strong>Buying a Home:</strong> Saving for a down payment and preparing for mortgage payments.</li>
+    <li>🎓 <strong>Education:</strong> Planning for higher education or funding a child’s education.</li>
+    <li>🚗 <strong>Major Purchases:</strong> Saving for a car, home renovations, or luxury items.</li>
+    <li>🛫 <strong>Travel:</strong> Setting aside money for vacations or international travel.</li>
+    <li>🏖 <strong>Retirement:</strong> Building a retirement fund through pensions, investments, and savings accounts.</li>
+  </ul>
 </div>
 
+<!-- Emergency Funds -->
+<div class="info-section">
+  <h2><i class="fas fa-umbrella-beach info-icon"></i> Building an Emergency Fund</h2>
+  <p>
+    An emergency fund is a financial safety net designed to cover unexpected expenses, such as medical emergencies, car repairs, or job loss. Financial experts recommend saving at least 3 to 6 months' worth of living expenses.
+  </p>
+  <ul>
+    <li>🏥 <strong>Medical Emergencies:</strong> Unplanned medical bills or treatments.</li>
+    <li>🚗 <strong>Car Repairs:</strong> Sudden repairs or maintenance costs.</li>
+    <li>🏠 <strong>Home Repairs:</strong> Fixing appliances, plumbing issues, or home damages.</li>
+    <li>💼 <strong>Job Loss:</strong> Covering living expenses during periods of unemployment.</li>
+  </ul>
+</div>
 
 <!-- FAQ Section -->
 <div class="faq-section">
@@ -183,7 +215,7 @@
   <p>© 2024 Financials4U | Empowering Financial Freedom</p>
 </footer>
 
-<!-- JavaScript for Calculator -->
+<!-- JavaScript for FAQ Toggle and Goal calculator-->
 <script>
   function calculateGoal() {
     const goal = document.getElementById('goalAmount').value;
@@ -191,7 +223,6 @@
     const months = Math.ceil(goal / monthly);
     document.getElementById('goalResult').innerText = `It will take ${months} month(s) to reach your goal.`;
   }
-  // FAQ Toggle
   document.querySelectorAll('.faq-question').forEach(item => {
     item.addEventListener('click', () => {
       const answer = item.nextElementSibling;
@@ -200,11 +231,8 @@
   });
 </script>
 
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
 </body>
 </html>
-
