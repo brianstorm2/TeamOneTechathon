@@ -1,112 +1,67 @@
-<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Pension Advice</title>
-  &lt;!&ndash; Favicon&ndash;&gt;
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-  &lt;!&ndash; Font Awesome icons (free version)&ndash;&gt;
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-  &lt;!&ndash; Google fonts&ndash;&gt;
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-  &lt;!&ndash; Core theme CSS (includes Bootstrap)&ndash;&gt;
-  <link href="/css/styles.css" rel="stylesheet" />
-</head>
-<body id="page-top">
-&lt;!&ndash; Navigation&ndash;&gt;
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="altMainNav">
-  <div class="container">
-    <a class="navbar-brand" href="#page-top"><img src="/assets/img/navbar-logo.svg" alt="..." /></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
-      <i class="fas fa-bars ms-1"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-        <li class="nav-item"><a class="nav-link" href="/">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/mortgages">Mortages</a></li>
-        <li class="nav-item"><a class="nav-link" href="/budgets">Budgeting</a></li>
-        <li class="nav-item"><a class="nav-link" href="/pensions">Pensions</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Pension Calculator by Financials4U" />
+    <meta name="author" content="Financials4U" />
+    <title>Financials4U | Pension Calculator</title>
 
-</body>
-</html>-->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Pension Calculator by Financials4U" />
-  <meta name="author" content="Financials4U" />
-  <title>Financials4U | Pension Calculator</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/styles.css" rel="stylesheet" />
 
-  <!-- Font Awesome icons -->
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Custom Styles for Pension Calculator -->
+    <style>
+        .calculator-container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-  <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
-  <!-- Bootstrap core CSS -->
-  <link href="/css/styles.css" rel="stylesheet" />
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
 
-  <!-- Custom Styles for Pension Calculator -->
-  <style>
-    .calculator-container {
-      background-color: #fff;
-      max-width: 600px;
-      margin: 100px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+        button:hover {
+            background-color: #0056b3;
+        }
 
-    input[type="number"], button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    /* Company Branding */
-    .brand-name {
-      font-size: 24px;
-      font-weight: bold;
-      color: #007bff;
-    }
-  </style>
+        /* Company Branding */
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -114,7 +69,7 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="altMainNav">
   <div class="container">
-    <a class="navbar-brand brand-name" href="#page-top">Financials4U</a>
+    <a class="navbar-brand brand-name" href="/">Financials4U</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
       Menu <i class="fas fa-bars ms-1"></i>
     </button>
@@ -128,81 +83,59 @@
         <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
       </ul>
     </div>
-  </div>
 </nav>
 
 <!-- Pension Calculator Section -->
 <div class="calculator-container">
-  <h2 style="text-align: center;">Financials4U Pension Calculator</h2>
+    <h2 style="text-align: center;">Financials4U Pension Calculator</h2>
 
-  <!-- Input Fields for Pension Calculation -->
-  <label for="currentAge">Current Age:</label>
-  <input type="number" id="currentAge" placeholder="Enter your current age">
+    <form id="pensionForm" onsubmit="calculatePension(event)">
+        <label for="currentAge">Current Age:</label>
+        <input type="number" id="currentAge" placeholder="Enter your current age" required>
 
-  <label for="retirementAge">Retirement Age:</label>
-  <input type="number" id="retirementAge" placeholder="Enter your desired retirement age">
+        <label for="retirementAge">Retirement Age:</label>
+        <input type="number" id="retirementAge" placeholder="Enter your desired retirement age" required>
 
-  <label for="currentSavings">Current Savings (£):</label>
-  <input type="number" id="currentSavings" placeholder="Enter your current savings">
+        <label for="currentSavings">Current Savings (£):</label>
+        <input type="number" id="currentSavings" placeholder="Enter your current savings" required>
 
-  <label for="annualContribution">Annual Contribution (£):</label>
-  <input type="number" id="annualContribution" placeholder="Enter annual contribution">
+        <label for="annualContribution">Annual Contribution (£):</label>
+        <input type="number" id="annualContribution" placeholder="Enter annual contribution" required>
 
-  <label for="annualReturnRate">Annual Return Rate (%):</label>
-  <input type="number" id="annualReturnRate" placeholder="Expected annual return rate">
+        <label for="annualReturnRate">Annual Return Rate (%):</label>
+        <input type="number" id="annualReturnRate" placeholder="Expected annual return rate" required>
 
-  <!-- Button to Trigger Pension Calculation -->
-  <button onclick="calculatePension()">Calculate Pension</button>
+        <button type="submit">Calculate Pension</button>
+    </form>
 
-  <!-- Result Display -->
-  <div id="result"></div>
+    <div id="result"></div>
 </div>
 
-<!-- JavaScript for Pension Calculation -->
-<script>
-  // Function to calculate projected pension
-  function calculatePension() {
-    // Get values from the input fields
-    const currentAge = document.getElementById('currentAge').value;
-    const retirementAge = document.getElementById('retirementAge').value;
-    const currentSavings = document.getElementById('currentSavings').value;
-    const annualContribution = document.getElementById('annualContribution').value;
-    const annualReturnRate = document.getElementById('annualReturnRate').value;
+<script src="/js/pension.js"></script>
 
-    // Validate inputs
-    if (!currentAge || !retirementAge || !currentSavings || !annualContribution || !annualReturnRate) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    // Prepare the data to send to the backend
-    const requestData = {
-      currentAge: parseInt(currentAge),
-      retirementAge: parseInt(retirementAge),
-      currentSavings: parseFloat(currentSavings),
-      annualContribution: parseFloat(annualContribution),
-      annualReturnRate: parseFloat(annualReturnRate)
-    };
-
-    // Send a POST request to the backend API
-    fetch('/api/pension/calculate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(requestData)
-    })
-            .then(response => response.json())
-            .then(data => {
-              // Display the projected savings in £
-              document.getElementById('result').innerHTML =
-                      `Projected Savings at Retirement: £${data.projectedSavings.toLocaleString()}`;
-            })
-            .catch(error => {
-              console.error('Error:', error);
-              document.getElementById('result').innerHTML = "Error calculating pension.";
-            });
-  }
-</script>
+<!-- Mock Comment Section-->
+<div class="container mt-5">
+    <h4>Comments</h4>
+    <div class="comment-section">
+        <div class="comment mb-4">
+            <img src="/assets/img/blank-profile.jpg"
+                 alt="Profile" class="rounded-circle"
+                 width="50"
+                 height="50">
+            <div class="comment-content ml-3">
+                <h5>maarib_software23</h5>
+                <p>I'm now a pensions expert!</p>
+            </div>
+        </div> <div class="comment mb-4">
+        <img src="/assets/img/blank-profile.jpg"
+             alt="Profile" class="rounded-circle" width="50" height="50">
+        <div class="comment-content ml-3">
+            <h5>trevor_smith</h5>
+            <p>This site is the best!</p>
+        </div>
+    </div>
+    </div>
+</div>
 
 </body>
 </html>
-
