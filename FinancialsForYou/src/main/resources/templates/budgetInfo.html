@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Comprehensive Budgeting and Savings Guide by Financials4U">
+  <meta name="author" content="Financials4U">
+  <title>Financials4U | Budgeting & Saving Guide</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f0f2f5;
+      padding-top: 80px;
+    }
+
+    .header-section {
+      background: linear-gradient(to right, #00b894, #00cec9);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .info-section, .tips-section, .faq-section, .interactive-section {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px 30px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+    }
+
+    .info-icon {
+      font-size: 50px;
+      color: #00b894;
+    }
+
+    .btn-action {
+      background-color: #00b894;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .btn-action:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .progress {
+      height: 30px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #e9ecef;
+    }
+
+    .progress-bar {
+      font-size: 14px;
+      line-height: 30px;
+      color: white;
+      text-align: center;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">Financials4U</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+      Menu <i class="fas fa-bars ms-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/budgets">Budgeting & Saving</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pensions">Pensions</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header Section -->
+<div class="header-section">
+  <h1>Master Your Money: Budgeting & Saving Made Simple</h1>
+  <p>Learn how to manage your finances, save wisely, and invest in your future.</p>
+</div>
+
+<!-- What is Budgeting Section -->
+<div class="info-section">
+  <h2><i class="fas fa-wallet info-icon"></i> What is Budgeting?</h2>
+  <p>Budgeting helps you plan and control your income and expenses. It's the key to financial freedom and achieving your goals.</p>
+</div>
+
+<!-- 🚀 Steps to Create a Budget -->
+<div class="info-section">
+  <h2><i class="fas fa-tasks info-icon"></i> 🚀 Steps to Create a Budget</h2>
+  <ol>
+    <li>📊 <strong>Calculate Your Income:</strong> Know how much money you bring in monthly.</li>
+    <li>📝 <strong>Track Your Spending:</strong> Understand where your money goes.</li>
+    <li>🎯 <strong>Set Clear Financial Goals:</strong> Define what you’re saving for.</li>
+    <li>💳 <strong>Allocate Funds Wisely:</strong> Apply the 50/30/20 rule or similar.</li>
+    <li>🔄 <strong>Review Regularly:</strong> Adjust your budget as needed.</li>
+  </ol>
+  <a href="/budget-calculator" class="btn-action">🚀 Try Our Budget Calculator</a>
+</div>
+
+<!-- 50/30/20 Rule Progress Bar -->
+<div class="tips-section">
+  <h2><i class="fas fa-tasks info-icon"></i> Visual Guide: 50/30/20 Rule</h2>
+  <div class="progress">
+    <div class="progress-bar bg-primary" style="width: 50%;">50% Needs</div>
+    <div class="progress-bar bg-success" style="width: 30%;">30% Wants</div>
+    <div class="progress-bar bg-warning text-dark" style="width: 20%;">20% Savings</div>
+  </div>
+</div>
+
+<!-- Interactive Savings Goal Calculator -->
+<div class="interactive-section">
+  <h2><i class="fas fa-calculator info-icon"></i> Set Your Savings Goal</h2>
+  <label for="goalAmount">Savings Goal (£):</label>
+  <input type="number" id="goalAmount" placeholder="Enter your savings goal">
+  <label for="monthlySaving">Monthly Saving (£):</label>
+  <input type="number" id="monthlySaving" placeholder="Enter how much you can save monthly">
+  <button class="btn-action" onclick="calculateGoal()">Calculate</button>
+  <p id="goalResult"></p>
+</div>
+
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <h2><i class="fas fa-question-circle info-icon"></i> Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <p class="faq-question">📊 How much should I save each month?</p>
+    <p class="faq-answer">Financial experts recommend saving at least 20% of your income.</p>
+  </div>
+  <div class="faq-item">
+    <p class="faq-question">💳 How do I reduce debt while saving?</p>
+    <p class="faq-answer">Prioritise high-interest debts and create a debt repayment plan while saving small amounts.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 Financials4U | Empowering Financial Freedom</p>
+</footer>
+
+<!-- JavaScript for Calculator -->
+<script>
+  function calculateGoal() {
+    const goal = document.getElementById('goalAmount').value;
+    const monthly = document.getElementById('monthlySaving').value;
+    const months = Math.ceil(goal / monthly);
+    document.getElementById('goalResult').innerText = `It will take ${months} month(s) to reach your goal.`;
+  }
+  // FAQ Toggle
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
+
