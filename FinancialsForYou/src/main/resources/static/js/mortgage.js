@@ -1,4 +1,5 @@
 async function calculateMortgage(event) {
+    // prevent default form submission
     event.preventDefault();
 
     const principal = document.getElementById('principal').value;
@@ -14,5 +15,6 @@ async function calculateMortgage(event) {
     });
     // results section
     const monthlyPayment = await response.json();
+    //update HTML to reflect results
     document.getElementById('result').innerText = `Your Monthly Payment will be £${monthlyPayment.toFixed(2)}`;
 }
