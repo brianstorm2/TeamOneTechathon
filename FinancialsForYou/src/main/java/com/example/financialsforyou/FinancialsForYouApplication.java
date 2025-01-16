@@ -19,11 +19,7 @@ public class FinancialsForYouApplication {
     return "mortgages"; 
     }
 
-
-
-
     @GetMapping("/pensions") //pensions page
-
     public String pensions() {
         return "pensions";
     }
@@ -33,21 +29,28 @@ public class FinancialsForYouApplication {
         return "about";
     }
 
-
     @GetMapping("/investments") //investments page
-
     public String investments() {
         return "investments";
     }
 
-
-
     @GetMapping("/budgets") //budgets page
-
     public String budgets() { return "budgets"; }
 
-    @GetMapping("/quiz")
+    @GetMapping("/quiz") //quiz page
     public String quiz() { return "quiz"; }
+
+    @GetMapping("/investmentsInfo") //investments article page
+    public String investmentsInfo() { return "investmentsInfo"; }
+
+    @GetMapping("/mortgageInfo") //mortgage article page
+    public String mortgageInfo() { return "mortgageInfo"; }
+
+    @GetMapping("/pensionsInfo") //pensions article page
+    public String pensionsInfo() { return "pensionsInfo"; }
+
+    @GetMapping("/budgetInfo") //budget article page
+    public String budgetInfo() { return "budgetInfo"; }
 
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
