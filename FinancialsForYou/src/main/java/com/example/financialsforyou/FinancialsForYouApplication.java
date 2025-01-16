@@ -34,6 +34,11 @@ public class FinancialsForYouApplication {
         return "about";
     }
 
+    @GetMapping("/investments")
+    public String investments() {
+        return "investments";
+    }
+
 
     public static void main(String[] args) {
         SpringApplication.run(FinancialsForYouApplication.class, args);
