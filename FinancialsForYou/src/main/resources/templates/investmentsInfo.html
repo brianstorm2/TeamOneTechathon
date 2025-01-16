@@ -93,19 +93,30 @@
 </head>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="altMainNav">
     <div class="container">
-        <a class="navbar-brand" href="/">Financials4U</a>
+        <a class="navbar-brand brand-name" href="/">Financials4U</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             Menu <i class="fas fa-bars ms-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/budgets">Budgeting & Saving</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/mortgages">Mortgages</a></li>
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mortgages">Mortgages</a></li>
+                <li class="nav-item"><a class="nav-link" href="/budgets">Budgeting</a></li>
                 <li class="nav-item"><a class="nav-link" href="/pensions">Pensions</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
             </ul>
+            <!-- Search Bar -->
+            <form class="d-flex ms-auto my-2 my-lg-0" id="searchForm">
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Search Articles"
+                       aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div id="searchDropdown" class="dropdown-menu"></div>
+            </form>
         </div>
     </div>
 </nav>
